@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container{
+    width: 90%;
+    height: 80%;
+
+    margin: 4rem;
+    /* margin: 4rem auto 0 auto; */
+    /* padding-top: 4rem; */
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.main-container .img-container{
+    width: 5%;
+    height: 100%;
+    transition: all 2s ease;
+}
+
+.main-container .img-container img{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 4rem;
+    cursor: pointer;
+    object-fit: none;
+}
+
+/*  */
+
+.activeDivImage{
+    flex-grow: 1;
+}
+
+.imageObjectFill{
+    object-fit: cover;
+}
