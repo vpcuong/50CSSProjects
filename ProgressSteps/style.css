@@ -1,3 +1,21 @@
+:root {
+	--inactive-color: #DCD7C9;
+	--active-color: #C30E59;
+
+	--button-bg-color: #A1E3F9; /* Color before hover */
+	--button-hover-bg-color: #578FCA; /* Color after hover */
+	--button-text-color: #000;
+	--button-hover-text-color: #fff;
+
+	--panel-button-bg-color: #C30E59; /* Color before hover */
+	--panel-button-hover-bg-color: #E82561; /* Color after hover */
+	--panel-button-text-color: #fff;
+	--panel-button-hover-text-color: #fff;
+	--panel-bg-color: #EFF3EA;
+	--panel-applause-color: #f5e911;
+	--panel-text-color: #22b52a;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -23,7 +41,7 @@ body {
 	left: 35%;
 	text-align: center;
 
-	background-color: #EFF3EA;
+	background-color: var(--panel-bg-color);
 	border-radius: 1rem;
 
 	animation: open 4s;
@@ -35,13 +53,13 @@ body {
 
 .congrass>.congrass-icon {
 	font-size: 3rem;
-	color: #f5e911;
+	color: var(--panel-applause-color);
 	margin-top: 0.5rem;
 }
 
 .congrass>.congrass-text {
 	font-size: 1.5rem;
-	color: #22b52a;
+	color: var(--panel-text-color);
 	margin-top: 1rem;
 }
 
@@ -52,15 +70,14 @@ body {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	background-color: #C30E59;
-
-	color: #fff;
+	background-color: var(--panel-button-bg-color);
+	color: var(--panel-button-text-color);
 
 	font-size: 1rem;
 }
 
 .congrass>.congrass-button:hover {
-	background-color: #E82561;
+	background-color: var(--panel-button-hover-bg-color);
 }
 
 .main-container {
@@ -80,8 +97,8 @@ body {
 	width: 4rem;
 	height: 4rem;
 
-	outline: 5px solid #DCD7C9;
-	color: #DCD7C9;
+	outline: 5px solid var(--inactive-color);
+	color: var(--inactive-color);
 	border-radius: 50%;
 
 	text-align: center;
@@ -95,7 +112,7 @@ body {
 .step-bar {
 	width: 6rem;
 	height: 0.3rem;
-	background-color: #DCD7C9;
+	background-color: var(--inactive-color);
 
 	transition: all 2s ease;
 }
@@ -111,21 +128,21 @@ body {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	background-color: #A1E3F9;
+	background-color: var(--button-bg-color);
 }
 
-.main-container>.button-control>button:hover {
-	background-color: #578FCA;
-	color: aliceblue;
+.main-container>.button-control > button:hover {
+	background-color: var(--button-hover-bg-color);
+	color: var(--button-hover-text-color);
 }
 
 .stepActive {
-	outline: 5px solid #578FCA;
-	color: #578FCA;
+	outline: 5px solid var(--button-hover-bg-color);
+	color: var(--button-hover-bg-color);
 }
 
 .barActive {
-	background-color: #3674B5;
+	background-color: var(--button-hover-bg-color);
 }
 
 @keyframes open {
